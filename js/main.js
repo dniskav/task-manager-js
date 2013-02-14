@@ -73,7 +73,7 @@ TASKMANAGER = {
              
             tmpl = document.createElement('div');
             tmpl.id = 'tName-' + curTask.tId;
-            tmpl.className = 'task-block btn btn-warning';
+            tmpl.className = 'task-block btn btn-info';
             tmpl.appendChild(
                 document.createTextNode(curTask.tName)
                 );
@@ -151,10 +151,11 @@ TASKMANAGER = {
         },
         /**
          *set the status of a task
-         *@param {status} integer
+         *@param {task} integer
          *@return {setStatus} object
          */
-        setStatus : function(status){
+        setStatus : function(task){
+            
             
             
             return setStatus;
