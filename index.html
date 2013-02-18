@@ -19,31 +19,9 @@
     </head>
     <body>
 
-        <div class="controls">
-            <div class="input-prepend">
 
-                <a href="#" id="set-user" class=" btn btn-primary">Create user</a>
-                <input type="text" id="user-name">
-            </div>
-
-
-            <div class="input-prepend">
-                <a href="#" id="add-task-to-user" class="btn btn-warning">Add task: </a>
-                <select id="tasks">
-                    <option value="1">task 1</option>
-                    <option value="2">task 2</option>
-                    <option value="3">task 3</option>
-                    <option value="4">task 4</option>
-                    <option value="5">task 5</option>
-                    <option value="6">task 6</option>
-                    <option value="7">task 7</option>
-                </select>
-            </div>
-        </div>
         <div id="workspace">
-            <div class="vertical-spacer">
 
-            </div>
         </div>
 
         <!--modal window-->
@@ -67,41 +45,19 @@
             </div>
         </div>
         <!--/modal window-->
-
+ 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/render.js"></script>
-        <script src="js/templates.js"></script>
-        <script src="js/tasks.js"></script>
-        <script src="js/user.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/model.js"></script>
         <script src="js/vendor/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             jsonData = {
                 container: workspace
             }
-            TASKMANAGER = new TM(jsonData);
-            
-//            TASKMANAGER.init(jsonData);
-            
-            btnAddUsr = document.getElementById('set-user');
-            userName = document.getElementById('user-name');
-            btnAssingTask = document.getElementById('add-task-to-user');
-            taskList = document.getElementById('tasks');
-            
-            
-            btnAddUsr.onclick = function(e){
-                
-                TASKMANAGER.user.add(userName.value);
-                return false;
-            }
-            
-            btnAssingTask.onclick = function(e){
-                
-                TASKMANAGER.user.addTask(taskList.value);
-                return false;
-            }
+
+            var TM = new baseModel(obj={},"add", "3") ;
             
         </script>
 
